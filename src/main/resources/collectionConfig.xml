@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    emp bean-->
+    <bean id="empBean" class="com.springcore.collection.Emp">
+        <property name="empName" value="Shivam"/>
+        <property name="empPhones">
+            <list>
+                <value>8459787658</value>
+                <value>9404797976</value>
+            </list>
+        </property>
+        <property name="empAddress">
+            <set>
+                <value>
+                    ashta kasar
+                </value>
+                <value>
+                    chh. sambhajinagar
+                </value>
+            </set>
+        </property>
+        <property name="empCourses">
+                <map>
+                    <entry key="java" value="1month"/>
+                    <entry key="spring framework" value="3month"/>
+                    <entry key="other dev. tools" value="3weeks"/>
+                </map>
+        </property>
+    </bean>
+</beans>

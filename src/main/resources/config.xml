@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -16,5 +18,14 @@
             <value>ashtakasar</value>
         </property>
     </bean>
+<!-- Student bean 2-->
+    <bean id="s2obj" class="com.IOCcore.Student">
+        <property name="studentId" value="9"/>
+        <property name="studentName" value="pravin"/>
+        <property name="studentAddress" value="Sambhajinagar"/>
+    </bean>
+<!-- Student bean 3 using p schema-->
+
+<bean id="s3obj" class="com.IOCcore.Student" p:studentId="46" p:studentName="Rohan" p:studentAddress="Sambhajinagar"/>
 
 </beans>
