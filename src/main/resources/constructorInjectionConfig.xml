@@ -10,8 +10,11 @@
         <constructor-arg value="413604" type="int"/>
     </bean>
     <bean id="person" class="com.springcore.constructorInjection.Person" >
-        <constructor-arg value="Shivam" type="String"/>
-        <constructor-arg value="36" type="int"/>
+<!--        if there are more than one constructor then there is ambiguty
+ hanppens at that time we have to give type atributes as a data type of the
+  parameters and we also use index atributes to give  the index of parameters-->
+        <constructor-arg value="Shivam" type="String" index="0"/>
+        <constructor-arg value="36" type="int" index="1"/>
         <constructor-arg ref="address"/>
     </bean>
 </beans>
