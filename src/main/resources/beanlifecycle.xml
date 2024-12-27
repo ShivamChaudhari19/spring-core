@@ -5,7 +5,10 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="TV" class="com.springcore.beanlifecycle.TV" init-method="init" destroy-method="destroy">
-    <property name="size" value="32 inch"/>
-</bean>
+    <bean id="TV" class="com.springcore.beanlifecycle.TV" init-method="init" destroy-method="destroy">
+        <property name="size" value="32 inch"/>
+    </bean>
+    <bean id="SetUpBox" class="com.springcore.beanlifecycle.SetUpBox">
+        <property name="name" value="DD free dish"/>
+    </bean>
 </beans>

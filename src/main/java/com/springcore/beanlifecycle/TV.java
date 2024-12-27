@@ -18,10 +18,11 @@ public class TV {
         this.size = size;
     }
     public void init(){
-        System.out.println("inside init method");
+        // init method calls at the time of bean
+        System.out.println("TV turned ON");
     }
     public void destroy(){
-        System.out.println("inside destroy method");
+        System.out.println("TV is OFF");
     }
     @Override
     public String toString() {
