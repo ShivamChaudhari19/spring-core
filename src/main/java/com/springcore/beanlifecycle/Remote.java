@@ -1,5 +1,9 @@
 package com.springcore.beanlifecycle;
 
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 public class Remote {
     private String remoteName;
 

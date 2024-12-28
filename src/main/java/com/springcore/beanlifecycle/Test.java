@@ -12,5 +12,7 @@ public class Test {
         context.registerShutdownHook();
         SetUpBox setupbox= (SetUpBox) context.getBean("SetUpBox");
         System.out.println(setupbox.getName());
+        Remote r1= (Remote) context.getBean("remote");
+        System.out.println(r1);
     }
 }
