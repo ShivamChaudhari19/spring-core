@@ -8,10 +8,14 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
     <bean id="collage" class="com.springcore.autowire.Collage">
         <property name="cName" value="DIEMS"/>
     </bean>
-    <bean id="student" class="com.springcore.autowire.Student" autowire="byType" >
-<!--        <property name="sName" value="Shivam"/>-->
+    <bean id="student" class="com.springcore.autowire.Student">
+        <property name="sName" value="shivam"/>
     </bean>
+<!--    <bean id="student" class="com.springcore.autowire.Student" autowire="byType" >-->
+<!--        <property name="sName" value="Shivam"/>-->
+<!--    </bean>-->
 </beans>
