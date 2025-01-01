@@ -1,15 +1,19 @@
 package com.springcore.autowire;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Student {
 
     private String sName;
 //    @Autowired
+
     private Collage collage;
-//    @Autowired
+
+    @Autowired
+    @Qualifier("collage")
     public void setCollage(Collage collage) {
-        System.out.println("setting value using setter method:"+collage);
+        System.out.println("setting value using setter method:" + collage);
         this.collage = collage;
     }
 
@@ -18,17 +22,17 @@ public class Student {
     }
 
     public void setsName(String sName) {
-        System.out.println("setting value using setter method:"+sName);
+        System.out.println("setting value using setter method:" + sName);
         this.sName = sName;
     }
 
     public Collage getCollage() {
         return collage;
     }
-    @Autowired
+
     public Student(Collage collage) {
         super();
-        System.out.println("setting value using constructor:"+collage);
+        System.out.println("setting value using constructor:" + collage);
         this.collage = collage;
     }
 
