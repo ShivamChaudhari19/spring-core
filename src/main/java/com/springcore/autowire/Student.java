@@ -7,7 +7,6 @@ public class Student {
 
     private String sName;
 //    @Autowired
-
     private Collage collage;
 
     @Autowired

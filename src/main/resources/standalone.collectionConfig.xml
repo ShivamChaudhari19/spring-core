@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd">
+<!--    List collection-->
+    <util:list id="friendList" list-class="java.util.ArrayList">
+<!--        list-class give the util class not interfaces -->
+            <value>Karan</value>
+            <value>Pravin</value>
+            <value>Rohan</value>
+    </util:list>
+    <util:map id="namePrice" map-class="java.util.HashMap">
+        <entry key="Yayati" value="400"/>
+        <entry key="Bhagawatgeeta" value="500"/>
+    </util:map>
+    <bean id="person" class="com.springcore.standalone.collection.Person">
+        <property name="friends" ref="friendList"/>
+    </bean>
+    <bean id="book" class="com.springcore.standalone.collection.Book">
+        <property name="namePrice" ref="namePrice"/>
+    </bean>
+</beans>
