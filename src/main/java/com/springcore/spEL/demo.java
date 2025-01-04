@@ -13,8 +13,14 @@ public class demo {
     private  int b;
     @Value("#{T(java.lang.Math).PI}") //To call static methods or access static fields, use T(classname).
     private float pi;
+    @Value("#{new java.lang.String('shivam')}")
+//Implications:
+//    While it may work in your case, relying on new in SpEL is not recommended for the following reasons:
+//
+//    Portability: This behavior is not guaranteed across all Spring environments or configurations.
+//    Security: Allowing new can expose your application to potential risks if the SpEL expressions are externally controlled.
+//    Readability: Standard alternatives like static factory methods or direct values are more intuitive for most Spring developers.
     private String name;
-
     public int getA() {
         return a;
     }
